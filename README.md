@@ -2,9 +2,24 @@
 
 ## Building
 
-    meson builddir
-    ninja -C builddir  # Add scan-build for analysis.
+1. Set up build system:
+
+       meson builddir
+
+1. Then, either perform a normal build:
+
+       ninja -C builddir
+
+1. Or, use Clang Analyzer:
+
+       ninja scan-build -C builddir
 
 ## Running
 
-    builddir/demo
+* Run normally:
+
+       builddir/demo
+
+* Run under Valgrind:
+
+       valgrind --leak-check=yes builddir/demo
