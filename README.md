@@ -3,7 +3,7 @@
 ## Building
 
     meson builddir
-    ninja -C builddir
+    ninja -C builddir  # Add scan-build for analysis.
 
 ## Running
 
